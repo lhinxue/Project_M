@@ -1,20 +1,4 @@
-import {
-    Badge,
-    Button,
-    Drawer,
-    DrawerBody,
-    DrawerContent,
-    Link,
-    Listbox,
-    ListboxItem,
-    Navbar,
-    NavbarBrand,
-    NavbarContent,
-    NavbarItem,
-    Tab,
-    Tabs,
-    useDisclosure,
-} from "@nextui-org/react";
+import { Badge, Button, Drawer, DrawerBody, DrawerContent, Link, Listbox, ListboxItem, Navbar, NavbarBrand, NavbarContent, NavbarItem, Tab, Tabs, useDisclosure } from "@nextui-org/react";
 import { useSwipeable } from "react-swipeable";
 
 import Lucid from "./Lucide";
@@ -31,7 +15,10 @@ function Navigator() {
     const onSwipRight = useSwipeable({ onSwipedRight: () => onOpen() });
     return (
         <>
-            <Navbar {...onSwipRight} classNames={{ wrapper: "sm:px-10 px-4" }}>
+            <Navbar
+                {...onSwipRight}
+                classNames={{ wrapper: "sm:px-10 px-4 ", base: " max-w-none" }}
+            >
                 <NavbarBrand className="flex gap-3">
                     <Button className="sm:hidden flex" variant="light" isIconOnly onPress={onOpen}>
                         <Lucid.Menu />
@@ -39,7 +26,7 @@ function Navigator() {
                     <p className="font-bold text-inherit">Honkai: Star Rail</p>
                 </NavbarBrand>
                 <NavbarContent className="hidden sm:flex" justify="end">
-                    <Tabs variant="underlined">
+                    <Tabs variant="underlined" >
                         {menuItems.map((m) => (
                             <Tab {...m} />
                         ))}

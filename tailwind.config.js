@@ -13,5 +13,37 @@ export default {
         },
     },
     darkMode: "class",
-    plugins: [nextui()]
+    plugins: [nextui({
+        "themes": {
+            "dark": {
+                "colors": {
+                    "default": {
+                        "50": "#2c292c",
+                        "100": "#4a454a",
+                        "200": "#686268",
+                        "300": "#867e86",
+                        "400": "#a19ba1",
+                        "500": "#bcb8bc",
+                        "600": "#d8d5d8",
+                        "700": "#f3f2f3",
+                        "foreground": "#fff",
+                        "DEFAULT": "#686268"
+                    },
+                    "primary": {
+                        "50": "#47331f",
+                        "100": "#785634",
+                        "200": "#aa7949",
+                        "300": "#db9c5e",
+                        "400": "#e3b282",
+                        "500": "#ebc9a6",
+                        "600": "#f3dfcb",
+                        "700": "#fbf5ef",
+                        "foreground": "#000",
+                        "DEFAULT": "#aa7949"
+                    }
+                }
+            }
+        }
+    }
+    )]
 }
